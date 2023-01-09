@@ -45,10 +45,7 @@ root: ~/Dev/dapp_projects/ambire-next
 # attach: false
 
 windows:
-  - Editor/Requests:
-      layout: main-vertical
-      panes:
-        - vim
-        - tldr httpie
+  - Editor: vim
+  - Requests: tldr httpie
   - Git: lg
   - Server: yarn dev
