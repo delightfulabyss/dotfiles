@@ -41,11 +41,13 @@ bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
+# Set background
+exec_always --no-startup-id feh --bg-scale ~/Pictures/Wallpapers/ubuntu.png
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
 # Startup applications
-# exec --no-startup-id i3-sensible-terminal 
+exec --no-startup-id i3-sensible-terminal 
 # exec --no-startup-id brave-browser
 # exec --no-startup-id spotify 
 # exec --no-startup-id thunderbird 
