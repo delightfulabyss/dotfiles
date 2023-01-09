@@ -26,6 +26,7 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 vim.keymap.set("n", "<leader>c", ":bd<CR>") -- Close buffer
 vim.keymap.set("n", "<leader>p", ":bp<CR>") -- Previous buffer
 vim.keymap.set("n", "<leader>n", ":bn<CR>") -- Next buffer
+vim.keymap.set("n", "<leader>x", ":edit +set buftype=nofile<CR>") -- Open scratch buffer
 -- Windows
 vim.keymap.set({ "n", "v" }, "<leader>h", "<C-w>h")
 vim.keymap.set({ "n", "v" }, "<leader>j", "<C-w>j")
