@@ -36,7 +36,7 @@ vim.cmd([[colorscheme tokyonight-night]])
 o.completeopt = "menuone,noselect"
 
 -- Set shiftwidth and tabstop
-o.shiftwidth = 2
+o.shiftwidth = 1
 o.tabstop = 2
 
 --Set line wrapping
