@@ -1,0 +1,17 @@
+lastupdatecheck: 0
+recentrepos:
+- /home/matthew/Dev/dapp_projects/ambire-next
+startuppopupversion: 5
+customcommandshistory:
+- git add .
+- git remote https://github.com/delightfulabyss/timelock-contract.git
+- git remote add https://github.com/delightfulabyss/timelock-contract.git
+- git remote add -m origin https://github.com/delightfulabyss/timelock-contract.git
+- git remote add origin https://github.com/delightfulabyss/timelock-contract.git
+- git pull --all
+- git fetch --all
+- git remote list
+- git remote -v
+- git remote show -v
+- git remote origin -v
+hidecommandlog: false
