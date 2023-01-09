@@ -30,7 +30,7 @@ wo.signcolumn = "yes"
 
 -- Set colorscheme
 o.termguicolors = true
-vim.cmd([[colorscheme tokyonight]])
+vim.cmd([[colorscheme tokyonight-night]])
 
 -- Set completeopt to have a better completion experience
 o.completeopt = "menuone,noselect"
