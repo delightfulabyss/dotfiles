@@ -47,7 +47,7 @@ exec_always --no-startup-id feh --bg-scale ~/Pictures/Wallpapers/synthwave_musta
 floating_modifier $mod
 
 # Startup applications
-exec --no-startup-id i3-sensible-terminal 
+# exec --no-startup-id i3-sensible-terminal 
 # exec --no-startup-id brave-browser
 # exec --no-startup-id spotify 
 # exec --no-startup-id thunderbird 
