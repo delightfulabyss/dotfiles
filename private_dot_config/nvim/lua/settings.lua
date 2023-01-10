@@ -47,5 +47,7 @@ wo.foldmethod = "expr"
 wo.foldexpr = "nvim_treesitter#foldexpr()"
 vim.api.nvim_create_autocmd({ "BufReadPost", "FileReadPost" }, {
 	pattern = "*",
-	command = "normal zR",
+	callback = function()
+		vim.cmd("normal zR")
+	end,
 })
