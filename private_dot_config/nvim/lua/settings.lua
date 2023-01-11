@@ -50,5 +50,4 @@ o.wrap = true
 -- 	callback = function()
 -- 		vim.cmd("normal zR")
 -- 	end,
-:q
 -- })
