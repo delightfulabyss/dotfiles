@@ -112,7 +112,8 @@ require("lspconfig").sumneko_lua.setup({
 
 --Global diagnostic configuration
 vim.diagnostic.config({
-	signs = false,
+	signs = true,
+	virtual_text = false,
 	float = {
 		source = "always",
 	},
