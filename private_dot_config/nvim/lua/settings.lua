@@ -43,11 +43,6 @@ o.tabstop = 2
 o.wrap = true
 
 --Set code folding
--- wo.foldmethod = "expr"
--- wo.foldexpr = "nvim_treesitter#foldexpr()"
--- vim.api.nvim_create_autocmd({ "BufReadPost", "FileReadPost" }, {
--- 	pattern = "*",
--- 	callback = function()
--- 		vim.cmd("normal zR")
--- 	end,
--- })
+o.foldenable = false
+wo.foldmethod = "expr"
+wo.foldexpr = "nvim_treesitter#foldexpr()"
