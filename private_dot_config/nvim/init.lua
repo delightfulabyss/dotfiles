@@ -7,7 +7,7 @@ require("settings") -- main vim / neovim settings
 
 require("nvim-highlight-colors").setup({}) -- highlight colors
 require("config.gitsigns") -- gitsigns settings
-require("octo") -- github
+require("config.octo") -- github
 require("config.indent_blankline") -- indent_blankline settings
 require("config.lsp") -- lsp settings
 require("config.dap") --debugging
