@@ -26,12 +26,45 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 vim.keymap.set("n", "<leader>c", ":bd<CR>") -- Close buffer
 vim.keymap.set("n", "<leader>p", ":bp<CR>") -- Previous buffer
 vim.keymap.set("n", "<leader>n", ":bn<CR>") -- Next buffer
+
 -- Windows
+
+--Navigation
 vim.keymap.set({ "n", "v" }, "<leader>h", "<C-w>h")
 vim.keymap.set({ "n", "v" }, "<leader>j", "<C-w>j")
 vim.keymap.set({ "n", "v" }, "<leader>k", "<C-w>k")
 vim.keymap.set({ "n", "v" }, "<leader>l", "<C-w>l")
 
+--Splits
+vim.keymap.set({ "n", "v" }, "<leader>v", "<C-w>s")
+vim.keymap.set({ "n", "v" }, "<leader>h", "<C-w>v")
+
+--Rotate
+vim.keymap.set({ "n", "v" }, "<leader>r", "<C-w>r")
+vim.keymap.set({ "n", "v" }, "<leader>R", "<C-w>R")
+
+--Swap
+vim.keymap.set({ "n", "v" }, "<leader>x", "<C-w>x")
+vim.keymap.set({ "n", "v" }, "<leader>X", "<C-w>X")
+
+--Change layout
+vim.keymap.set({ "n", "v" }, "<leader>H", "<C-w>H")
+vim.keymap.set({ "n", "v" }, "<leader>J", "<C-w>J")
+vim.keymap.set({ "n", "v" }, "<leader>K", "<C-w>K")
+vim.keymap.set({ "n", "v" }, "<leader>L", "<C-w>L")
+
+--Resize
+vim.keymap.set({ "n", "v" }, "<leader>=", "<C-w>=")
+vim.keymap.set({ "n", "v" }, "<leader><", "<C-w><")
+vim.keymap.set({ "n", "v" }, "<leader>>", "<C-w>>")
+vim.keymap.set({ "n", "v" }, "<leader>+", "<C-w>+")
+vim.keymap.set({ "n", "v" }, "<leader>-", "<C-w>-")
+
+--Open tag in new window
+vim.keymap.set({ "n", "v" }, "<leader>]", "<C-w>]")
+
+--Preview tag in new window
+vim.keymap.set({ "n", "v" }, "<leader>}", "<C-w>}")
 -- See `:help telescope.builtin`
 vim.keymap.set("n", "<leader><space>", require("telescope.builtin").buffers, { desc = "[ ] Find existing buffers" })
 vim.keymap.set("n", "<leader>/", function()
