@@ -144,4 +144,4 @@ configuration {
       sorting-method:    "name";
   }
 }
-@theme "/rofi/tokyonight.rasi"
+@theme "$XDG_USER_CONFIG_DIR/rofi/tokyonight.rasi"
