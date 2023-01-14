@@ -50,12 +50,12 @@ local on_attach = function(_, bufnr)
 	vim.api.nvim_buf_create_user_command(bufnr, "Format", formatfunc, { desc = "Format current buffer with LSP" })
 
 	-- Enable format on save
-	-- vim.api.nvim_create_autocmd("BufWritePre", {
-	-- 	pattern = "*",
-	-- 	callback = function()
-	-- 		formatfunc()
-	-- 	end,
-	-- })
+	vim.api.nvim_create_autocmd("BufWritePre", {
+		pattern = "*",
+		callback = function()
+			formatfunc()
+		end,
+	})
 end
 
 -- Setup mason so it can manage external tooling
