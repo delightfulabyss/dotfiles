@@ -212,11 +212,6 @@ _G.packer_plugins = {
     path = "/home/matthew/.local/share/nvim/site/pack/packer/start/mkdnflow.nvim",
     url = "https://github.com/jakewvincent/mkdnflow.nvim"
   },
-  ["modicator.nvim"] = {
-    loaded = true,
-    path = "/home/matthew/.local/share/nvim/site/pack/packer/start/modicator.nvim",
-    url = "https://github.com/mawkler/modicator.nvim"
-  },
   neotest = {
     loaded = true,
     path = "/home/matthew/.local/share/nvim/site/pack/packer/start/neotest",
@@ -406,6 +401,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/matthew/.local/share/nvim/site/pack/packer/start/trouble.nvim",
     url = "https://github.com/folke/trouble.nvim"
+  },
+  ["vim-fugitive"] = {
+    loaded = true,
+    path = "/home/matthew/.local/share/nvim/site/pack/packer/start/vim-fugitive",
+    url = "https://github.com/tpope/vim-fugitive"
   },
   ["vim-illuminate"] = {
     loaded = true,
