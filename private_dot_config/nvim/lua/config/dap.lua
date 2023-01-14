@@ -1,6 +1,6 @@
 -- debugging
 require("mason-nvim-dap").setup({
-	ensure_installed = { "node2", "chrome", "codelldb", "bash" },
+	ensure_installed = { "codelldb", "bash", "js-debug-adapter" },
 	automatic_installation = true,
 	automatic_setup = true,
 })
