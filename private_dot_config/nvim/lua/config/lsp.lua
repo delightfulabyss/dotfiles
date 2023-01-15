@@ -110,6 +110,8 @@ require("lspconfig").sumneko_lua.setup({
 	},
 })
 
+require("lspconfig").tailwindcss.setup({})
+
 --Global diagnostic configuration
 vim.diagnostic.config({
 	underline = true,
