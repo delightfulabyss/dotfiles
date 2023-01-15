@@ -35,7 +35,6 @@ require("config.which-key") -- keymap legend
 require("bufferline").setup() --snazzy bufferline
 require("trouble").setup() -- trouble list
 require("config.null-ls") -- formatting and linting
-require("config.leap") -- better navigation
 require("marks").setup() -- better marks experience
 require("config.oil") -- file explorer
 -- The line beneath this is called `modeline`. See `:help modeline`
