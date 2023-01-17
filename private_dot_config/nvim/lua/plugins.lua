@@ -153,7 +153,6 @@ packer.startup(function(use, use_rocks)
 		},
 	})
 	use({ "stevearc/oil.nvim" })
-	use({ "ur4ltz/surround.nvim" })
 	use({ "psliwka/vim-smoothie" })
 	use({ "tpope/vim-fugitive" })
 	if is_bootstrap then
