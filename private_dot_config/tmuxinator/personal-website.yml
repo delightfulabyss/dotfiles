@@ -47,5 +47,4 @@ root: ~/Dev/dapp_projects/personal-website
 windows:
   - Editor: vim
   - Requests: tldr httpie
-  - Git: git status
-  - Server: yarn dev
+  - Server: yarn build && yarn start
