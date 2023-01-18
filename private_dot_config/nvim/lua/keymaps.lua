@@ -40,18 +40,18 @@ vim.keymap.set({ "n", "v" }, "<leader>wv", "<C-w>s")
 vim.keymap.set({ "n", "v" }, "<leader>ws", "<C-w>v")
 
 --Rotate
-vim.keymap.set({ "n", "v" }, "<leader>r", "<C-w>r")
-vim.keymap.set({ "n", "v" }, "<leader>R", "<C-w>R")
+vim.keymap.set({ "n", "v" }, "<leader>wr", "<C-w>r")
+vim.keymap.set({ "n", "v" }, "<leader>wR", "<C-w>R")
 
 --Swap
-vim.keymap.set({ "n", "v" }, "<leader>x", "<C-w>x")
-vim.keymap.set({ "n", "v" }, "<leader>X", "<C-w>X")
+vim.keymap.set({ "n", "v" }, "<leader>wx", "<C-w>x")
+vim.keymap.set({ "n", "v" }, "<leader>wX", "<C-w>X")
 
 --Change layout
-vim.keymap.set({ "n", "v" }, "<leader>H", "<C-w>H")
-vim.keymap.set({ "n", "v" }, "<leader>J", "<C-w>J")
-vim.keymap.set({ "n", "v" }, "<leader>K", "<C-w>K")
-vim.keymap.set({ "n", "v" }, "<leader>L", "<C-w>L")
+vim.keymap.set({ "n", "v" }, "<leader>wH", "<C-w>H")
+vim.keymap.set({ "n", "v" }, "<leader>wJ", "<C-w>J")
+vim.keymap.set({ "n", "v" }, "<leader>wK", "<C-w>K")
+vim.keymap.set({ "n", "v" }, "<leader>wL", "<C-w>L")
 
 --Resize
 vim.keymap.set({ "n", "v" }, "<leader>=", "<C-w>=")
