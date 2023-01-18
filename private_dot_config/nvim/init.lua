@@ -37,5 +37,6 @@ require("trouble").setup() -- trouble list
 require("config.null-ls") -- formatting and linting
 require("marks").setup() -- better marks experience
 require("config.oil") -- file explorer
+require("impatient") -- plugin caching
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
