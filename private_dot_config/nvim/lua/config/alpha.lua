@@ -24,6 +24,8 @@ dashboard.section.buttons.val = {
 	dashboard.button("c", "⚙️  Open config", ":e $MYVIMRC<CR>"),
 }
 
+local footer
+
 Job:new({
 	command = "http",
 	args = { "GET", "https://stoicquotesapi.com/v1/api/quotes/random" },
@@ -31,12 +33,13 @@ Job:new({
 	env = {},
 	on_stdout = function(err, data)
 		if err then
-			dashboard.section.footer.val = err
+			footer = err
 		else
-			dashboard.section.footer.val = data
+			footer = data
 		end
 	end,
 })
+dashboard.section.footer.val = footer
 dashboard.config.opts.noautocmd = true
 vim.cmd([[autocmd User AlphaReady echo 'ready']])
 
