@@ -134,9 +134,6 @@ vim.keymap.set({ "n", "t" }, "<C-k>", ":NavigatorUp<CR>")
 vim.keymap.set({ "n", "t" }, "<C-j>", ":NavigatorDown<CR>")
 vim.keymap.set({ "n", "t" }, "<C-p>", ":NavigatorPrevious<CR>")
 
--- Reload configuration
-vim.keymap.set({ "n", "v" }, "<Leader>R", ":luafile $MYVIMRC<CR>")
-
 --Oil File Explorer
 vim.keymap.set({ "n", "v" }, "<Leader>e", require("oil").open)
 
