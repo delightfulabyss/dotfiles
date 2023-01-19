@@ -33,13 +33,12 @@ Job:new({
 	env = {},
 	on_stdout = function(err, data)
 		if err then
-			footer = err
+			dashboard.section.footer.val = err
 		else
-			footer = data.body
+			dashboard.section.footer.val = data.body
 		end
 	end,
 })
-dashboard.section.footer.val = footer
 dashboard.config.opts.noautocmd = true
 vim.cmd([[autocmd User AlphaReady echo 'ready']])
 
