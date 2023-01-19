@@ -21,7 +21,7 @@ dashboard.section.buttons.val = {
 	dashboard.button("t", "📜  Find text", ":Telescope live_grep<CR>"),
 	dashboard.button("c", "⚙️  Open config", ":e $MYVIMRC<CR>"),
 }
-
+dashboard.section.footer.val = "hello"
 dashboard.config.opts.noautocmd = true
 vim.cmd([[autocmd User AlphaReady echo 'ready']])
 
