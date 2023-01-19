@@ -35,7 +35,7 @@ Job:new({
 		if err then
 			dashboard.section.footer.val = err
 		else
-			dashboard.section.footer.val = data.body
+			dashboard.section.header.val = data.body
 		end
 	end,
 })
