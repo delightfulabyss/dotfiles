@@ -116,7 +116,7 @@ require("lspconfig").tailwindcss.setup({})
 vim.diagnostic.config({
 	underline = true,
 	signs = true,
-	virtual_text = true,
+	virtual_text = false,
 	float = {
 		show_header = true,
 		source = "always",
