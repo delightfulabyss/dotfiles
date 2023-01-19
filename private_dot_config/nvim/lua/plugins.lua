@@ -156,6 +156,7 @@ packer.startup(function(use, use_rocks)
 	use({ "psliwka/vim-smoothie" })
 	use({ "tpope/vim-fugitive" })
 	use({ "lewis6991/impatient.nvim" })
+	use({ "Exafunction/codeium.vim" })
 	if is_bootstrap then
 		packer.sync()
 	end
