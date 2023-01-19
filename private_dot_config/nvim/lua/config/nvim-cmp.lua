@@ -8,6 +8,9 @@ cmp.setup({
 			luasnip.lsp_expand(args.body)
 		end,
 	},
+	formatting = {
+		format = require("tailwindcss-colorizer-cmp").formatter
+	},
 	mapping = cmp.mapping.preset.insert({
 		["<C-d>"] = cmp.mapping.scroll_docs(-4),
 		["<C-f>"] = cmp.mapping.scroll_docs(4),
@@ -45,3 +48,8 @@ cmp.setup({
 })
 -- Load friendly snippets
 require("luasnip.loaders.from_vscode").lazy_load()
+
+-- Inline taiwindcss color previews
+require("tailwindcss-colorizer-cmp").setup({
+	color_square_width = 2,
+})
