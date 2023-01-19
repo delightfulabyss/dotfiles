@@ -30,7 +30,11 @@ Job:new({
 	cwd = "~/",
 	env = {},
 	on_stdout = function(err, data)
-		dashboard.section.footer.val = data
+		if err then
+			dashboard.section.footer.val = err
+		else
+			dashboard.section.footer.val = data
+		end
 	end,
 })
 dashboard.config.opts.noautocmd = true
