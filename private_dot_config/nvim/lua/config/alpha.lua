@@ -1,7 +1,5 @@
 local alpha = require("alpha")
 local dashboard = require("alpha.themes.dashboard")
-local Job = require("plenary.job")
--- local http = require("socket.http")
 dashboard.section.header.val = {
 	[[                                                 ]],
 	[[                                                 ]],
@@ -24,21 +22,6 @@ dashboard.section.buttons.val = {
 	dashboard.button("c", "⚙️  Open config", ":e $MYVIMRC<CR>"),
 }
 
-local footer
-
-Job:new({
-	command = "http",
-	args = { "GET", "https://stoicquotesapi.com/v1/api/quotes/random" },
-	cwd = "~/",
-	env = {},
-	on_stdout = function(err, data)
-		if err then
-			dashboard.section.footer.val = err
-		else
-			dashboard.section.header.val = data.body
-		end
-	end,
-})
 dashboard.config.opts.noautocmd = true
 vim.cmd([[autocmd User AlphaReady echo 'ready']])
 
