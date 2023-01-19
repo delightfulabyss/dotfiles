@@ -1,5 +1,6 @@
 local alpha = require("alpha")
 local dashboard = require("alpha.themes.dashboard")
+local Job = require("plenary.job")
 -- local http = require("socket.http")
 dashboard.section.header.val = {
 	[[                                                 ]],
@@ -12,8 +13,8 @@ dashboard.section.header.val = {
 	[[ \/_/\/_/\/____/\/___/  \/__/    \/_/\/_/\/_/\/_/]],
 	[[                                                 ]],
 	[[                                                 ]],
-	[[           He who is brave, is free.             ]],
-	[[                  --Seneca                       ]],
+	[[                                                 ]],
+	[[                                                 ]],
 }
 dashboard.section.buttons.val = {
 	dashboard.button("e", "✨  New file", ":ene <BAR> startinsert <CR>"),
@@ -23,12 +24,15 @@ dashboard.section.buttons.val = {
 	dashboard.button("c", "⚙️  Open config", ":e $MYVIMRC<CR>"),
 }
 
--- local randomId = math.random(1, 1000)
--- local response = http.request("stoic-api.vercel.app/api/quote", {
--- 	method = "GET",
--- 	body = randomId,
--- })
--- dashboard.section.footer.val = response
+Job:new({
+	command = "http",
+	args = { "GET", "https://stoicquotesapi.com/v1/api/quotes/random" },
+	cwd = "~/",
+	env = {},
+	on_stdout = function(err, data)
+		dashboard.section.footer.val = data
+	end,
+})
 dashboard.config.opts.noautocmd = true
 vim.cmd([[autocmd User AlphaReady echo 'ready']])
 
