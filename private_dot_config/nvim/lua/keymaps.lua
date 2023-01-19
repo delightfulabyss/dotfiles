@@ -71,7 +71,7 @@ vim.keymap.set("n", "<leader>/", function()
 	-- You can pass additional configuration to telescope to change theme, layout, etc.
 	require("telescope.builtin").current_buffer_fuzzy_find(require("telescope.themes").get_dropdown({
 		winblend = 10,
-		previewer = false,
+		previewer = true,
 	}))
 end, { desc = "[/] Fuzzily search in current buffer]" })
 
@@ -98,7 +98,7 @@ vim.keymap.set("n", "<leader>sk", require("telescope.builtin").keymaps, { desc =
 vim.keymap.set("n", "[d", vim.diagnostic.goto_prev)
 vim.keymap.set("n", "]d", vim.diagnostic.goto_next)
 vim.keymap.set("n", "<leader>d", function()
-	vim.diagnostic.open_float({ scope = "cursor" })
+	vim.diagnostic.open_float({ scope = "line" })
 end)
 vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist)
 
