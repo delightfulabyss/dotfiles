@@ -35,7 +35,7 @@ Job:new({
 		if err then
 			footer = err
 		else
-			footer = data
+			footer = data.body
 		end
 	end,
 })
