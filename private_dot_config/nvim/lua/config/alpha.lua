@@ -30,7 +30,7 @@ end
 local J = response.body
 local L = "return " .. J:gsub('("[^"]-"):', "[%1]=")
 local T = loadstring(L)()
-local quote_string = '\r\n\r\n\r\n\r\n\r\n\r\n"' .. T.body .. '"' .. " " .. T.author
+local quote_string = '"' .. T.body .. '"' .. " " .. T.author
 dashboard.section.footer.val = quote_string
 dashboard.config.opts.noautocmd = true
 vim.cmd([[autocmd User AlphaReady echo 'ready']])
