@@ -22,8 +22,6 @@ dashboard.section.header.val = {
 	[[ \/_/\/_/\/____/\/___/  \/__/    \/_/\/_/\/_/\/_/]],
 	[[                                                 ]],
 	[[                                                 ]],
-	quote,
-	author,
 }
 dashboard.section.buttons.val = {
 	dashboard.button("e", "✨  New file", ":ene <BAR> startinsert <CR>"),
@@ -32,7 +30,7 @@ dashboard.section.buttons.val = {
 	dashboard.button("t", "📜  Find text", ":Telescope live_grep<CR>"),
 	dashboard.button("c", "⚙️  Open config", ":e $MYVIMRC<CR>"),
 }
-
+dashbaord.section.buttons.val = quote .. "\r\n" .. author
 dashboard.config.opts.noautocmd = true
 vim.cmd([[autocmd User AlphaReady echo 'ready']])
 
