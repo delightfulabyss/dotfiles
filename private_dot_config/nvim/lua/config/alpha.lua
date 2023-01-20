@@ -1,6 +1,16 @@
 local alpha = require("alpha")
 local dashboard = require("alpha.themes.dashboard")
 local curl = require("plenary.curl")
+
+local response = curl.request({ url = "https://stoicquotesapi.com/v1/api/quotes/random", method = "get" })
+if response == nil then
+	dashboard.section.footer.val = nil
+end
+local J = response.body
+local L = "return " .. J:gsub('("[^"]-"):', "[%1]=")
+local T = loadstring(L)()
+local quote = '"' .. T.body .. '"'
+local author = T.author
 dashboard.section.header.val = {
 	[[                                                 ]],
 	[[                                                 ]],
@@ -12,8 +22,8 @@ dashboard.section.header.val = {
 	[[ \/_/\/_/\/____/\/___/  \/__/    \/_/\/_/\/_/\/_/]],
 	[[                                                 ]],
 	[[                                                 ]],
-	[[                                                 ]],
-	[[                                                 ]],
+	[[quote]],
+	[[author]],
 }
 dashboard.section.buttons.val = {
 	dashboard.button("e", "✨  New file", ":ene <BAR> startinsert <CR>"),
@@ -23,15 +33,6 @@ dashboard.section.buttons.val = {
 	dashboard.button("c", "⚙️  Open config", ":e $MYVIMRC<CR>"),
 }
 
-local response = curl.request({ url = "https://stoicquotesapi.com/v1/api/quotes/random", method = "get" })
-if response == nil then
-	dashboard.section.footer.val = nil
-end
-local J = response.body
-local L = "return " .. J:gsub('("[^"]-"):', "[%1]=")
-local T = loadstring(L)()
-local quote_string = '"' .. T.body .. '"' .. " " .. T.author
-dashboard.section.footer.val = quote_string
 dashboard.config.opts.noautocmd = true
 vim.cmd([[autocmd User AlphaReady echo 'ready']])
 
