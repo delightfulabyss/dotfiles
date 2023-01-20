@@ -22,7 +22,7 @@ dashboard.section.header.val = {
 	[[ \/_/\/_/\/____/\/___/  \/__/    \/_/\/_/\/_/\/_/]],
 	[[                                                 ]],
 	[[                                                 ]],
-	"\t\t\t" .. quote,
+	"                        " .. quote .. "                        ",
 	author,
 }
 dashboard.section.buttons.val = {
