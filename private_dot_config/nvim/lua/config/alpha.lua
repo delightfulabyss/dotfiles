@@ -10,7 +10,7 @@ local J = response.body
 local L = "return " .. J:gsub('("[^"]-"):', "[%1]=")
 local T = loadstring(L)()
 local quote = '"' .. T.body .. '"'
-local author = T.author
+local author = " " .. T.author
 dashboard.section.header.val = {
 	[[                                                 ]],
 	[[                                                 ]],
@@ -30,9 +30,8 @@ dashboard.section.buttons.val = {
 	dashboard.button("t", "📜  Find text", ":Telescope live_grep<CR>"),
 	dashboard.button("c", "⚙️  Open config", ":e $MYVIMRC<CR>"),
 }
-dashboard.section.footer.val = {
-	quote .. author,
-}
+dashboard.section.footer.val = quote .. author
+
 dashboard.config.opts.noautocmd = true
 vim.cmd([[autocmd User AlphaReady echo 'ready']])
 
