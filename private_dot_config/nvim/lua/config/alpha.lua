@@ -31,7 +31,7 @@ dashboard.section.buttons.val = {
 	dashboard.button("c", "⚙️  Open config", ":e $MYVIMRC<CR>"),
 }
 dashboard.section.footer.val = {
-	quote .. "\r\n" .. author,
+	'"' .. quote .. '"' .. author,
 }
 dashboard.config.opts.noautocmd = true
 vim.cmd([[autocmd User AlphaReady echo 'ready']])
