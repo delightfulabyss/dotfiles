@@ -30,7 +30,7 @@ dashboard.section.buttons.val = {
 	dashboard.button("t", "📜  Find text", ":Telescope live_grep<CR>"),
 	dashboard.button("c", "⚙️  Open config", ":e $MYVIMRC<CR>"),
 }
-dashboard.section.buttons.val = {
+dashboard.section.footer.val = {
 	quote .. "\r\n" .. author,
 }
 dashboard.config.opts.noautocmd = true
