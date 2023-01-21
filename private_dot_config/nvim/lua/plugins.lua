@@ -94,11 +94,11 @@ lazy.setup({
 	},
 	{ "psliwka/vim-smoothie" },
 	{ "Exafunction/codeium.vim" },
+	{ "tpope/vim-fugitive" },
 
 	--Lazily-loaded plugins
 	{ "folke/zen-mode.nvim", cmd = "ZenMode" },
-	{ "tpope/vim-fugitive" },
-	{ "stevearc/oil.nvim" },
+	{ "stevearc/oil.nvim", cmd = "Oil" },
 	{ "barrett-ruth/telescope-http.nvim" },
 	{ "chip/telescope-software-licenses.nvim" },
 	{ "nvim-telescope/telescope-media-files.nvim" },
