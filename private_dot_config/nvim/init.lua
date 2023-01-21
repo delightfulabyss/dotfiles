@@ -33,7 +33,6 @@ require("overseer").setup() -- task runner
 require("Navigator").setup() -- vim <> tmux
 require("nvim-autopairs").setup() -- auto close pairs
 require("config.which-key") -- keymap legend
-require("bufferline").setup() --snazzy bufferline
 require("trouble").setup() -- trouble list
 require("config.null-ls") -- formatting and linting
 require("marks").setup() -- better marks experience
