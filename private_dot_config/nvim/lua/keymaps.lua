@@ -1,8 +1,3 @@
--- Set <space> as the leader key
--- See `:help mapleader`
---  NOTE: Must happen before plugins are required (otherwise wrong leader will be used)
-vim.g.mapleader = " "
-vim.g.maplocalleader = " "
 
 -- Keymaps for better default experience
 -- See `:help vim.keymap.set()`
@@ -27,7 +22,8 @@ vim.keymap.set("n", "<leader>c", ":bd<CR>") -- Close buffer
 vim.keymap.set("n", "<leader>p", ":bp<CR>") -- Previous buffer
 vim.keymap.set("n", "<leader>n", ":bn<CR>") -- Next buffer
 
--- Windows
+-- Windows:
+-- 
 
 --Navigation
 vim.keymap.set({ "n", "v" }, "<leader>h", "<C-w>h")
