@@ -129,7 +129,7 @@ lazy.setup({
 	{ "numToStr/Navigator.nvim" },
 	{ "windwp/nvim-autopairs" },
 	{ "folke/which-key.nvim" },
-	{ "akinsho/bufferline.nvim", tag = "v3.*", dependencies = "nvim-tree/nvim-web-devicons" },
+	{ "akinsho/bufferline.nvim", tag = "latest", dependencies = "nvim-tree/nvim-web-devicons" },
 	{ "rafamadriz/friendly-snippets" },
 	{ "mfussenegger/nvim-dap" },
 	{ "rcarriga/nvim-dap-ui", dependencies = { "mfussenegger/nvim-dap" } },
