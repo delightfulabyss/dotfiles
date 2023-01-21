@@ -1,5 +1,6 @@
 -- import main settings & plugins
 require("keymaps") -- custom keymaps / shortcuts
+
 require("plugins") -- list of plugins
 require("settings") -- main vim / neovim settings
 
