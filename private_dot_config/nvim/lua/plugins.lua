@@ -159,7 +159,6 @@ lazy.setup({
 	{ "stevearc/oil.nvim" },
 	{ "psliwka/vim-smoothie" },
 	{ "tpope/vim-fugitive" },
-	-- { "lewis6991/impatient.nvim" },
 	{ "Exafunction/codeium.vim" },
 })
 -- { "Tastyep/structlog.nvim" })
