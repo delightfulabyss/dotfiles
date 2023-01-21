@@ -95,43 +95,56 @@ lazy.setup({
 	{ "psliwka/vim-smoothie" },
 	{ "Exafunction/codeium.vim" },
 	{ "tpope/vim-fugitive" },
+	-- Markdown
+	{ "jakewvincent/mkdnflow.nvim" },
 
 	--Lazily-loaded plugins
 	{ "folke/zen-mode.nvim", cmd = "ZenMode" },
 	{ "stevearc/oil.nvim", cmd = "Oil" },
-	{ "barrett-ruth/telescope-http.nvim" },
-	{ "chip/telescope-software-licenses.nvim" },
-	{ "nvim-telescope/telescope-media-files.nvim" },
-	{ "nvim-telescope/telescope-symbols.nvim" },
-	{ "rcarriga/nvim-dap-ui", dependencies = { "mfussenegger/nvim-dap" } },
+	{ "barrett-ruth/telescope-http.nvim", cmd = "Telescope" },
+	{ "chip/telescope-software-licenses.nvim", cmd = "Telescope" },
+	{ "nvim-telescope/telescope-media-files.nvim", cmd = "Telescope" },
+	{ "nvim-telescope/telescope-symbols.nvim", cmd = "Telescope" },
 	{
 		"goolord/alpha-nvim",
 		dependencies = { "nvim-tree/nvim-web-devicons" },
+		cmd = "Alpha",
 	},
-	{ "stevearc/overseer.nvim" },
+	{ "rcarriga/nvim-dap-ui", dependencies = { "mfussenegger/nvim-dap" } },
+	-- { "stevearc/overseer.nvim" },
 	{
 		"jackMort/ChatGPT.nvim",
 		dependencies = {
 			"MunifTanjim/nui.nvim",
 			"nvim-lua/plenary.nvim",
 		},
+		cmd = { "ChatGPT", "ChatGPTActAs", "ChatGPTEditWithInstructions" },
 	},
-	{ "xorid/asciitree.nvim" },
-	{ "hlucco/nvim-eswpoch" },
+	{ "xorid/asciitree.nvim", cmd = "AsciiTree" },
+	{ "hlucco/nvim-eswpoch", cmd = "Eswpoch" },
 	{
 		"narutoxy/silicon.lua",
 		dependencies = { "nvim-lua/plenary.nvim" },
+		cmd = {
+			"silicon.visualise_api()",
+			"silicon.visualise_api({to_clip = true, show_buf = true})",
+			"silicon.visualise_api({to_clip = true, visible = true})",
+			"silicon.visualise_api({to_clip = true})",
+		},
 	},
 	{
 		"folke/trouble.nvim",
 		dependencies = { "nvim-tree/nvim-web-devicons" },
+		cmd = { "Trouble", "TroubleToggle", "TroubleRefresh", "TroubleClose" },
 	},
 	-- Color picker
-	{ "uga-rosa/ccc.nvim" },
+	{
+		"uga-rosa/ccc.nvim",
+		cmd = { "CccPick", "CccConvert", "CccHighlighterToggle", "CccHighlighterEnable", "CccHighlighterDisable" },
+	},
 	-- Booleans
-	{ "https://github.com/nat-418/boole.nvim" },
-	-- Markdown
-	{ "jakewvincent/mkdnflow.nvim" },
+	{ "https://github.com/nat-418/boole.nvim", cmd = "Boole" },
+
 	-- Leap.nvim efficient naviation
 	{
 		"ggandor/leap.nvim",
@@ -142,10 +155,20 @@ lazy.setup({
 		end,
 	},
 	-- Fuzzy Finder (files, lsp, etc)
-	{ "nvim-telescope/telescope.nvim", branch = "0.1.x", dependencies = { "nvim-lua/plenary.nvim" } },
+	{
+		"nvim-telescope/telescope.nvim",
+		branch = "0.1.x",
+		dependencies = { "nvim-lua/plenary.nvim" },
+		cmd = "Telescope",
+	},
 
 	-- Fuzzy Finder Algorithm which requires local dependencies to be built. Only load if `make` is available
-	{ "nvim-telescope/telescope-fzf-native.nvim", build = "make", cond = vim.fn.executable("make") == 1 },
+	{
+		"nvim-telescope/telescope-fzf-native.nvim",
+		build = "make",
+		cond = vim.fn.executable("make") == 1,
+		cmd = "Telescope",
+	},
 	{
 		"pwntester/octo.nvim",
 		dependencies = {
@@ -153,8 +176,9 @@ lazy.setup({
 			"nvim-telescope/telescope.nvim",
 			"nvim-tree/nvim-web-devicons",
 		},
+		cmd = "Octo",
 	},
-	{ "numToStr/Comment.nvim" }, -- "gc" to comment visual regions/lines
+	{ "numToStr/Comment.nvim", event = "BufEnter" }, -- "gc" to comment visual regions/lines
 })
 -- { "Tastyep/structlog.nvim" })
 -- {
