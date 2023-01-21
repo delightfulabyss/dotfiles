@@ -17,7 +17,7 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-local lazy = require('lazy')
+local lazy = require("lazy")
 lazy.setup({
 	{ -- LSP Configuration & Plugins
 		"neovim/nvim-lspconfig",
@@ -61,7 +61,7 @@ lazy.setup({
 		dependencies = {
 			"nvim-lua/plenary.nvim",
 			"nvim-telescope/telescope.nvim",
-			"kyazdani42/nvim-web-devicons",
+			"nvim-tree/nvim-web-devicons",
 		},
 	},
 	"nvim-lualine/lualine.nvim", -- Fancier statusline
@@ -140,7 +140,7 @@ lazy.setup({
 	{ "RRethy/vim-illuminate" },
 	{
 		"folke/trouble.nvim",
-		dependencies = "kyazdani42/nvim-web-devicons",
+		dependencies = { "nvim-tree/nvim-web-devicons" },
 	},
 	"jose-elias-alvarez/null-ls.nvim",
 	{ "barrett-ruth/telescope-http.nvim" },
