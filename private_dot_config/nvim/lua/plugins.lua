@@ -102,7 +102,7 @@ lazy.setup({
 	},
 
 	{ "hlucco/nvim-eswpoch" },
-	{ "folke/zen-mode.nvim" },
+	{ "folke/zen-mode.nvim", cmd = "ZenMode" },
 	{ "jbyuki/one-small-step-for-vimkind" },
 	{ "nanotee/luv-vimdocs" },
 	{ "xorid/asciitree.nvim" },
