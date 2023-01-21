@@ -125,12 +125,7 @@ lazy.setup({
 	{
 		"narutoxy/silicon.lua",
 		dependencies = { "nvim-lua/plenary.nvim" },
-		cmd = {
-			"silicon.visualise_api()",
-			"silicon.visualise_api({to_clip = true, show_buf = true})",
-			"silicon.visualise_api({to_clip = true, visible = true})",
-			"silicon.visualise_api({to_clip = true})",
-		},
+		event = "BufEnter"
 	},
 	{
 		"folke/trouble.nvim",

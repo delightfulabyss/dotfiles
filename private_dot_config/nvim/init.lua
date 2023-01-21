@@ -27,7 +27,6 @@ require("config.silicon") --silicon screenshots
 require("config.zen-mode") --zen-mode
 require("todo-comments").setup() --todo comments
 require("chatgpt").setup() --chatgpt
-require("overseer").setup() -- task runner
 -- -- require('config.persistent-breakpoints') --persistent breakpoints
 require("Navigator").setup() -- vim <> tmux
 require("nvim-autopairs").setup() -- auto close pairs
