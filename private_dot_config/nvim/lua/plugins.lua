@@ -16,7 +16,6 @@ if not vim.loop.fs_stat(lazypath) then
 	})
 end
 vim.opt.rtp:prepend(lazypath)
-local packer = require("packer")
 
 lazy.setup({
 	{ -- LSP Configuration & Plugins
