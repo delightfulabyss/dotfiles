@@ -17,6 +17,7 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
+local lazy = require('lazy')
 lazy.setup({
 	{ -- LSP Configuration & Plugins
 		"neovim/nvim-lspconfig",
