@@ -17,7 +17,6 @@ require("config.treesitter") -- treesitter settings
 require("config.lualine") -- lualine settings
 require("Comment").setup() -- comment selected code by g+c
 require("config.alpha") -- startup splashscreen
-require("config.specs") -- smooth cursor
 require("config.nvim-cmp") -- autocompletion settings
 require("cmp") -- autocompletion
 require("config.mkdnflow") --better markdown
