@@ -1,12 +1,12 @@
+local alpha = require("alpha")
+local dashboard = require("alpha.themes.dashboard")
+local curl = require("plenary.curl")
+
 
 return {
 	"goolord/alpha-nvim",
 	dependencies = { "nvim-tree/nvim-web-devicons" },
 	config = function()
-	local alpha = require("alpha")
-	local dashboard = require("alpha.themes.dashboard")
-	local curl = require("plenary.curl")
-
 	local response = curl.request({ url = "https://stoicquotesapi.com/v1/api/quotes/random", method = "get" })
 	if response == nil then
 		dashboard.section.footer.val = nil
