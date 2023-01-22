@@ -1,39 +1,26 @@
 -- import main settings & plugins
+-- Set <space> as the leader key
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
 
-require("plugins") -- list of plugins
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not vim.loop.fs_stat(lazypath) then
+	vim.fn.system({
+		"git",
+		"clone",
+		"--filter=blob:none",
+		"https://github.com/folke/lazy.nvim.git",
+		"--branch=stable", -- latest stable release
+		lazypath,
+	})
+end
+vim.opt.rtp:prepend(lazypath)
+
+local lazy = require("lazy")
+
+lazy.setup("plugins") -- folder of plugins
 require("keymaps") -- custom keymaps / shortcuts
 require("settings") -- main vim / neovim settings
 
--- setup config for plugins
-
-require("nvim-highlight-colors").setup({}) -- highlight colors
-require("config.gitsigns") -- gitsigns settings
-require("config.octo") -- github
-require("config.indent_blankline") -- indent_blankline settings
-require("config.lsp") -- lsp settings
-require("config.dap") --debugging
-require("config.telescope") -- telescope settings
-require("config.treesitter") -- treesitter settings
-require("config.lualine") -- lualine settings
-require("Comment").setup() -- comment selected code by g+c
-require("config.alpha") -- startup splashscreen
-require("config.nvim-cmp") -- autocompletion settings
-require("cmp") -- autocompletion
-require("config.mkdnflow") --better markdown
-require("config.registers") -- better registers
-require("config.boole") -- toggle booleans
-require("ccc").setup() -- color picker
-require("config.silicon") --silicon screenshots
-require("config.zen-mode") --zen-mode
-require("todo-comments").setup() --todo comments
-require("chatgpt").setup() --chatgpt
--- -- require('config.persistent-breakpoints') --persistent breakpoints
-require("Navigator").setup() -- vim <> tmux
-require("nvim-autopairs").setup() -- auto close pairs
-require("config.which-key") -- keymap legend
-require("trouble").setup() -- trouble list
-require("config.null-ls") -- formatting and linting
-require("marks").setup() -- better marks experience
-require("config.oil") -- file explorer
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et

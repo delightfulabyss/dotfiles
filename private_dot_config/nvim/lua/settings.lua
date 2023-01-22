@@ -46,3 +46,18 @@ o.wrap = true
 o.foldenable = false
 wo.foldmethod = "expr"
 wo.foldexpr = "nvim_treesitter#foldexpr()"
+
+--Global diagnostic configuration
+vim.diagnostic.config({
+	underline = true,
+	signs = true,
+	virtual_text = false,
+	float = {
+		show_header = true,
+		source = "always",
+		border = "rounded",
+		focusable = false,
+	},
+	update_in_insert = false, -- default to false
+	severity_sort = false, -- default to false
+})
