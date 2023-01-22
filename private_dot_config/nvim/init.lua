@@ -17,8 +17,8 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 local lazy = require("lazy")
-
-lazy.setup("plugins") -- folder of plugins
+local plugins = require("plugins")
+lazy.setup(plugins) -- folder of plugins
 require("keymaps") -- custom keymaps / shortcuts
 require("settings") -- main vim / neovim settings
 
