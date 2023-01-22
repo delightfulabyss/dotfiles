@@ -20,6 +20,6 @@ return	{
 		for k, v in ipairs(extensions) do
 			pcall(require("telescope").load_extension, v)
 		end
-				end
+		end
 }
 
