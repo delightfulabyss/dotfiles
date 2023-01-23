@@ -24,7 +24,7 @@ vim.keymap.set("n", "<leader>.", function()
 	vim.api.nvim_create_buf(false, true)
 	vim.opt_local.buftype = "nofile"
 	vim.opt_local.bufhidden = "hide"
-	vim.opt_local.noswapfile = true
+	vim.opt_local.swapfile = "noswapfile"
 end) --Open scratch buffer
 
 -- Windows:
