@@ -10,6 +10,7 @@ return {
 		"hrsh7th/cmp-nvim-lua",
 		"roobert/tailwindcss-colorizer-cmp.nvim",
 	},
+	cmd = "BufEnter",
 	config = function()
 		local cmp = require("cmp")
 		local luasnip = require("luasnip")

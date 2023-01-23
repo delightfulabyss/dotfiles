@@ -1,5 +1,6 @@
 return {
 	"tversteeg/registers.nvim",
+	event = "BufEnter",
 	config = function()
 		local registers = require("registers")
 
