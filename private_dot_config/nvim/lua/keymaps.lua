@@ -21,7 +21,7 @@ vim.keymap.set("n", "<leader>c", ":bd<CR>") -- Close buffer
 vim.keymap.set("n", "<leader>p", ":bp<CR>") -- Previous buffer
 vim.keymap.set("n", "<leader>n", ":bn<CR>") -- Next buffer
 vim.keymap.set("n", "<leader>.", function()
-	vim.api.nvim_command("new")
+	vim.api.nvim_command("vnew")
 	vim.api.nvim_command("file scratch")
 	vim.api.nvim_command("setlocal buftype=nofile")
 	vim.api.nvim_command("setlocal bufhidden=wipe")
