@@ -21,7 +21,7 @@ vim.keymap.set("n", "<leader>c", ":bd<CR>") -- Close buffer
 vim.keymap.set("n", "<leader>p", ":bp<CR>") -- Previous buffer
 vim.keymap.set("n", "<leader>n", ":bn<CR>") -- Next buffer
 vim.keymap.set("n", "<leader>.", function()
-	local buf = vim.api.nvim_create_buf(false, true)
+	vim.api.nvim_create_buf(false, true)
 end) --Open scratch buffer
 
 -- Windows:
