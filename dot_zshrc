@@ -132,3 +132,5 @@ alias polybarconf="cm edit --apply ~/.config/polybar/config.ini"
 alias alacrittyconf="cm edit --apply ~/.config/alacritty/alacritty.yml"
 alias roficonf="cm edit --apply ~/.config/rofi/config.rasi"
 alias txc="tmuxinator copy"
+
+export PATH="$PATH:/home/matthew/.foundry/bin"
