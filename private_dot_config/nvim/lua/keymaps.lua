@@ -17,11 +17,11 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 	pattern = "*",
 })
 -- Buffers
-vim.keymap.set("n", "<leader>c", ":bd<CR>") -- Close buffer
-vim.keymap.set("n", "<leader>p", ":bp<CR>") -- Previous buffer
-vim.keymap.set("n", "<leader>n", ":bn<CR>") -- Next buffer
+vim.keymap.set("n", "<leader>c", ":bd<CR>", { silent = true }) -- Close buffer
+vim.keymap.set("n", "<leader>p", ":bp<CR>", { silent = true }) -- Previous buffer
+vim.keymap.set("n", "<leader>n", ":bn<CR>", { silent = true }) -- Next buffer
 vim.keymap.set("n", "<leader>.", function()
-	vim.api.nvim_command("vnew")
+	vim.api.nvim_command("enew")
 	vim.api.nvim_command("file Scratch")
 	vim.api.nvim_command("setlocal buftype=nofile")
 	vim.api.nvim_command("setlocal bufhidden=wipe")
@@ -39,7 +39,7 @@ vim.keymap.set({ "n", "v" }, "<leader>l", "<C-w>l")
 
 --Splits
 vim.keymap.set({ "n", "v" }, "<leader>wv", "<C-w>s")
-vim.keymap.set({ "n", "v" }, "<leader>ws", "<C-w>v")
+vim.keymap.set({ "n", "v" }, "<leader>wh", "<C-w>v")
 
 --Rotate
 vim.keymap.set({ "n", "v" }, "<leader>wr", "<C-w>r")
@@ -123,8 +123,10 @@ vim.keymap.set("n", "<Leader>ib", function()
 	require("silicon").visualise_api({})
 end)
 
---ChatGPT
+--ZenMode
 vim.keymap.set({ "n", "v" }, "<Leader>z", ":ZenMode<CR>")
+
+--ChatGPT
 vim.keymap.set({ "n", "v" }, "<Leader>ai", ":ChatGPT<CR>")
 vim.keymap.set({ "n", "v" }, "<Leader>aip", ":ChatGPTActAs<CR>")
 vim.keymap.set({ "n", "v" }, "<Leader>aic", ":ChatGPTEditWithInstructions<CR>")
@@ -137,7 +139,7 @@ vim.keymap.set({ "n", "t" }, "<C-j>", ":NavigatorDown<CR>")
 vim.keymap.set({ "n", "t" }, "<C-p>", ":NavigatorPrevious<CR>")
 
 --Oil File Explorer
-vim.keymap.set({ "n", "v" }, "<Leader>e", require("oil").open)
+vim.keymap.set({ "n", "v" }, "<Leader>e", ":Oil", { silent = true })
 
 --Dap
 vim.keymap.set("n", "<F5>", function()
