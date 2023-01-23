@@ -127,19 +127,19 @@ end)
 vim.keymap.set({ "n", "v" }, "<Leader>z", ":ZenMode<CR>")
 
 --ChatGPT
-vim.keymap.set({ "n", "v" }, "<Leader>ai", ":ChatGPT<CR>")
-vim.keymap.set({ "n", "v" }, "<Leader>aip", ":ChatGPTActAs<CR>")
-vim.keymap.set({ "n", "v" }, "<Leader>aic", ":ChatGPTEditWithInstructions<CR>")
+vim.keymap.set({ "n", "v" }, "<Leader>ai", ":ChatGPT<CR>", { silent = true })
+vim.keymap.set({ "n", "v" }, "<Leader>aip", ":ChatGPTActAs<CR>", { silent = true })
+vim.keymap.set({ "n", "v" }, "<Leader>aic", ":ChatGPTEditWithInstructions<CR>", { silent = true })
 
 --Tmux Navigator
-vim.keymap.set({ "n", "t" }, "<C-h>", ":NavigatorLeft<CR>")
-vim.keymap.set({ "n", "t" }, "<C-l>", ":NavigatorRight<CR>")
-vim.keymap.set({ "n", "t" }, "<C-k>", ":NavigatorUp<CR>")
-vim.keymap.set({ "n", "t" }, "<C-j>", ":NavigatorDown<CR>")
-vim.keymap.set({ "n", "t" }, "<C-p>", ":NavigatorPrevious<CR>")
+vim.keymap.set({ "n", "t" }, "<C-h>", ":NavigatorLeft<CR>", { silent = true })
+vim.keymap.set({ "n", "t" }, "<C-l>", ":NavigatorRight<CR>", { silent = true })
+vim.keymap.set({ "n", "t" }, "<C-k>", ":NavigatorUp<CR>", { silent = true })
+vim.keymap.set({ "n", "t" }, "<C-j>", ":NavigatorDown<CR>", { silent = true })
+vim.keymap.set({ "n", "t" }, "<C-p>", ":NavigatorPrevious<CR>", { silent = true })
 
 --Oil File Explorer
-vim.keymap.set({ "n", "v" }, "<Leader>e", ":Oil", { silent = true })
+vim.keymap.set({ "n", "v" }, "<Leader>e", ":Oil<CR>", { silent = true })
 
 --Dap
 vim.keymap.set("n", "<F5>", function()
