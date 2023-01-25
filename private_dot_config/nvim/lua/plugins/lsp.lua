@@ -87,7 +87,7 @@ return {
 		local util = require("lspconfig/util")
 		local capabilities = vim.lsp.protocol.make_client_capabilities()
 		require("lspconfig").capabilities = require("cmp_nvim_lsp").default_capabilities(capabilities)
-
+		capabilities.textDocument.completion.completionItem.snippetSupport = true
 		for _, lsp in ipairs(servers) do
 			lspconfig[lsp].setup({
 				on_attach = on_attach,
@@ -103,6 +103,7 @@ return {
 		table.insert(runtime_path, "lua/?.lua")
 		table.insert(runtime_path, "lua/?/init.lua")
 
+		-- Lua ls configuration
 		lspconfig.sumneko_lua.setup({
 			on_attach = on_attach,
 			capabilities = capabilities,
@@ -123,7 +124,29 @@ return {
 				},
 			},
 		})
-
+		-- Tailwind LS configuration
 		lspconfig.tailwindcss.setup({})
+
+		-- Emmet LS configuration
+		if not lspconfig.emmet_language_server then
+			configs.emmet_language_server = {
+				default_config = {
+					cmd = { "emmet-language-server", "--stdio" },
+					filetypes = {
+						"html",
+						"typescriptreact",
+						"javascriptreact",
+						"javascript",
+						"typescript",
+						"javascript.jsx",
+						"typescript.tsx",
+						"css",
+					},
+					root_dir = util.root_pattern("package.json", ".git"),
+					settings = {},
+				},
+			}
+		end
+		lspconfig.emmet_ls.setup({ capabilities = capabilities })
 	end,
 }
