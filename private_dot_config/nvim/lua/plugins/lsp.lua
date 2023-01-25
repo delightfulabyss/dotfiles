@@ -74,7 +74,7 @@ return {
 		require("mason").setup()
 		-- Enable the following language servers
 		-- Feel free to add/remove any LSPs that you want here. They will automatically be installed
-		local servers = { "cssls", "rust_analyzer", "solidity", "tsserver", "sumneko_lua" }
+		local servers = { "cssls", "rust_analyzer", "solidity", "tsserver", "sumneko_lua", "emmet_ls" }
 
 		-- Ensure the servers above are installed
 		require("mason-lspconfig").setup({
@@ -82,11 +82,14 @@ return {
 		})
 
 		-- nvim-cmp supports additional completion capabilities
+		local lspconfig = require("lspconfig")
+		local configs = require("lspconfig/configs")
+		local util = require("lspconfig/util")
 		local capabilities = vim.lsp.protocol.make_client_capabilities()
-		capabilities = require("cmp_nvim_lsp").default_capabilities(capabilities)
+		require("lspconfig").capabilities = require("cmp_nvim_lsp").default_capabilities(capabilities)
 
 		for _, lsp in ipairs(servers) do
-			require("lspconfig")[lsp].setup({
+			lspconfig[lsp].setup({
 				on_attach = on_attach,
 				capabilities = capabilities,
 			})
@@ -100,7 +103,7 @@ return {
 		table.insert(runtime_path, "lua/?.lua")
 		table.insert(runtime_path, "lua/?/init.lua")
 
-		require("lspconfig").sumneko_lua.setup({
+		lspconfig.sumneko_lua.setup({
 			on_attach = on_attach,
 			capabilities = capabilities,
 			settings = {
@@ -121,6 +124,6 @@ return {
 			},
 		})
 
-		require("lspconfig").tailwindcss.setup({})
+		lspconfig.tailwindcss.setup({})
 	end,
 }
