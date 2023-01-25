@@ -74,7 +74,7 @@ return {
 		require("mason").setup()
 		-- Enable the following language servers
 		-- Feel free to add/remove any LSPs that you want here. They will automatically be installed
-		local servers = { "cssls", "rust_analyzer", "solidity", "tsserver", "sumneko_lua", "emmet_language_server" }
+		local servers = { "cssls", "rust_analyzer", "solidity", "tsserver", "sumneko_lua", "emmet_ls" }
 
 		-- Ensure the servers above are installed
 		require("mason-lspconfig").setup({
@@ -85,6 +85,7 @@ return {
 		local lspconfig = require("lspconfig")
 		local configs = require("lspconfig/configs")
 		local util = require("lspconfig/util")
+
 		local capabilities = vim.lsp.protocol.make_client_capabilities()
 		require("lspconfig").capabilities = require("cmp_nvim_lsp").default_capabilities(capabilities)
 		capabilities.textDocument.completion.completionItem.snippetSupport = true
@@ -127,26 +128,18 @@ return {
 		-- Tailwind LS configuration
 		lspconfig.tailwindcss.setup({})
 
-		-- Emmet LS configuration
-		if not lspconfig.emmet_language_server then
-			configs.emmet_language_server = {
-				default_config = {
-					cmd = { "emmet-language-server", "--stdio" },
-					filetypes = {
-						"html",
-						"typescriptreact",
-						"javascriptreact",
-						"javascript",
-						"typescript",
-						"javascript.jsx",
-						"typescript.tsx",
-						"css",
-					},
-					root_dir = util.root_pattern("package.json", ".git"),
-					settings = {},
-				},
-			}
-		end
-		lspconfig.emmet_ls.setup({ capabilities = capabilities })
+    -- Emmet LS configuration
+		lspconfig.emmet_ls.setup({
+		 -- on_attach = on_attach,
+		 capabilities = capabilities,
+		 filetypes = { 'html', 'typescriptreact', 'javascriptreact', 'css', 'sass', 'scss', 'less' },
+		 init_options = {
+			 html = {
+				 options = {
+					 -- For possible options, see: https://github.com/emmetio/emmet/blob/master/src/config.ts#L79-L267
+					 ["bem.enabled"] = true,
+				 },
+			 },
+    }
 	end,
 }
