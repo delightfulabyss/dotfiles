@@ -8,10 +8,6 @@
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
-# Swap caps lock and escape
-exec_always --no-startup-id xmodmap -e "clear lock"
-exec_always --no-startup-id xmodmap -e "keycode 9 = Caps_Lock NoSymbol Caps_Lock"
-exec_always --no-startup-id xmodmap -e "keycode 66 = Escape NoSymbol Escape"
 
 set $mod Mod1
 
@@ -188,3 +184,7 @@ exec_always --no-startup-id ~/.config/i3/polybar.zsh &
 # Turn off mouse focus
 focus_follows_mouse no
 
+# Swap caps lock and escape
+exec_always --no-startup-id xmodmap -e "clear lock"
+exec_always --no-startup-id xmodmap -e "keycode 9 = Caps_Lock NoSymbol Caps_Lock"
+exec_always --no-startup-id xmodmap -e "keycode 66 = Escape NoSymbol Escape"
