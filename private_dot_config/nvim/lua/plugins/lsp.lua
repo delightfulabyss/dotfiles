@@ -74,7 +74,7 @@ return {
 		require("mason").setup()
 		-- Enable the following language servers
 		-- Feel free to add/remove any LSPs that you want here. They will automatically be installed
-		local servers = { "cssls", "rust_analyzer", "solidity", "tsserver", "sumneko_lua", "emmet_ls" }
+		local servers = { "cssls", "rust_analyzer", "solidity", "tsserver", "tailwindcss", "sumneko_lua", "emmet_ls" }
 
 		-- Ensure the servers above are installed
 		require("mason-lspconfig").setup({
@@ -103,44 +103,5 @@ return {
 		local runtime_path = vim.split(package.path, ";")
 		table.insert(runtime_path, "lua/?.lua")
 		table.insert(runtime_path, "lua/?/init.lua")
-
-		-- Lua ls configuration
-		lspconfig.sumneko_lua.setup({
-			on_attach = on_attach,
-			capabilities = capabilities,
-			settings = {
-				Lua = {
-					runtime = {
-						-- Tell the language server which version of Lua you're using (most likely LuaJIT)
-						version = "LuaJIT",
-						-- Setup your lua path
-						path = runtime_path,
-					},
-					diagnostics = {
-						globals = { "vim" },
-					},
-					workspace = { library = vim.api.nvim_get_runtime_file("", true) },
-					-- Do not send telemetry data containing a randomized but unique identifier
-					telemetry = { enable = false },
-				},
-			},
-		})
-		-- Tailwind LS configuration
-		lspconfig.tailwindcss.setup({})
-
-    -- Emmet LS configuration
-		lspconfig.emmet_ls.setup({
-		 -- on_attach = on_attach,
-		 capabilities = capabilities,
-		 filetypes = { 'html', 'typescriptreact', 'javascriptreact', 'css', 'sass', 'scss', 'less' },
-		 init_options = {
-			 html = {
-				 options = {
-					 -- For possible options, see: https://github.com/emmetio/emmet/blob/master/src/config.ts#L79-L267
-					 ["bem.enabled"] = true,
-				 },
-			 },
-    }
-		})
 	end,
 }
