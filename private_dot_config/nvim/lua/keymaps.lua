@@ -16,6 +16,7 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 	group = highlight_group,
 	pattern = "*",
 })
+
 -- Buffers
 vim.keymap.set("n", "<leader>c", ":bd<CR>", { silent = true }) -- Close buffer
 vim.keymap.set("n", "<leader>p", ":bp<CR>", { silent = true }) -- Previous buffer
@@ -29,8 +30,6 @@ vim.keymap.set("n", "<leader>.", function()
 end) --Open scratch buffer
 
 -- Windows:
---
-
 --Navigation
 vim.keymap.set({ "n", "v" }, "<leader>h", "<C-w>h")
 vim.keymap.set({ "n", "v" }, "<leader>j", "<C-w>j")
@@ -67,6 +66,7 @@ vim.keymap.set({ "n", "v" }, "<leader>]", "<C-w>]")
 
 --Preview tag in new window
 vim.keymap.set({ "n", "v" }, "<leader>}", "<C-w>}")
+
 -- See `:help telescope.builtin`
 vim.keymap.set("n", "<leader><space>", require("telescope.builtin").buffers, { desc = "[ ] Find existing buffers" })
 vim.keymap.set("n", "<leader>/", function()
@@ -76,7 +76,6 @@ vim.keymap.set("n", "<leader>/", function()
 		previewer = true,
 	}))
 end, { desc = "[/] Fuzzily search in current buffer]" })
-
 vim.keymap.set("n", "<leader>sf", function()
 	require("telescope.builtin").find_files({ hidden = true, no_ignore = true })
 end, { desc = "[S]earch [F]iles" })
@@ -96,13 +95,14 @@ vim.keymap.set(
 	{ desc = "[S]earch [M]edia Files" }
 )
 vim.keymap.set("n", "<leader>sk", require("telescope.builtin").keymaps, { desc = "[S]earch [K]eymaps" })
+
 -- Diagnostic keymaps
-vim.keymap.set("n", "[d", vim.diagnostic.goto_prev)
-vim.keymap.set("n", "]d", vim.diagnostic.goto_next)
-vim.keymap.set("n", "<leader>d", function()
+vim.keymap.set("n", "dp", vim.diagnostic.goto_prev)
+vim.keymap.set("n", "dn", vim.diagnostic.goto_next)
+vim.keymap.set("n", "do", function()
 	vim.diagnostic.open_float({ scope = "line" })
 end)
-vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist)
+vim.keymap.set("n", "dq", vim.diagnostic.setloclist)
 
 --Silicon
 
