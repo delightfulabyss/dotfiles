@@ -86,6 +86,9 @@ vim.keymap.set("n", "<leader>sg", require("telescope.builtin").live_grep, { desc
 vim.keymap.set("n", "<leader>sd", require("telescope.builtin").diagnostics, { desc = "[S]earch [D]iagnostics" })
 vim.keymap.set("n", "<leader>sm", require("telescope.builtin").marks, { desc = "[S]earch [M]arks" })
 vim.keymap.set("n", "<leader>sf", require("telescope.builtin").git_files, { desc = "[S]earch Git [F]iles" })
+-- vim.keymap.set("n", "<leader>sc", require("telescope.builtin").git_commits, { desc = "[S]earch Git [C]ommits" })
+-- vim.keymap.set("n", "<leader>sb", require("telescope.builtin").git_branches, { desc = "[S]earch Git [B]ranches" })
+-- vim.keymap.set("n", "<leader>ss", require("telescope.builtin").git_stashes, { desc = "[S]earch Git [S]tashes" })
 vim.keymap.set("n", "<leader>st", require("telescope").extensions.http.list, { desc = "[S]earch h[T]tp Codes" })
 vim.keymap.set("n", "<leader>sl", ":Telescope software-licenses find<CR>", { desc = "[S]earch Software [L]icenses" })
 vim.keymap.set(
