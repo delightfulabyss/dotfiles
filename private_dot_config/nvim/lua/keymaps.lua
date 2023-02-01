@@ -85,7 +85,10 @@ vim.keymap.set("n", "<leader>sw", require("telescope.builtin").grep_string, { de
 vim.keymap.set("n", "<leader>sg", require("telescope.builtin").live_grep, { desc = "[S]earch by [G]rep" })
 vim.keymap.set("n", "<leader>sd", require("telescope.builtin").diagnostics, { desc = "[S]earch [D]iagnostics" })
 vim.keymap.set("n", "<leader>sm", require("telescope.builtin").marks, { desc = "[S]earch [M]arks" })
-vim.keymap.set("n", "<leader>sg", require("telescope.builtin").git_files, { desc = "[S]earch [G]it files" })
+vim.keymap.set("n", "<leader>sf", require("telescope.builtin").git_files, { desc = "[S]earch Git [F]iles" })
+vim.keymap.set("n", "<leader>sc", require("telescope.builtin").git_commits, { desc = "[S]earch Git [C]ommits" })
+vim.keymap.set("n", "<leader>sb", require("telescope.builtin").git_branches, { desc = "[S]earch Git [B]ranches" })
+vim.keymap.set("n", "<leader>ss", require("telescope.builtin").git_stashes, { desc = "[S]earch Git [S]tashes" })
 vim.keymap.set("n", "<leader>st", require("telescope").extensions.http.list, { desc = "[S]earch h[T]tp Codes" })
 vim.keymap.set("n", "<leader>sl", ":Telescope software-licenses find<CR>", { desc = "[S]earch Software [L]icenses" })
 vim.keymap.set(
@@ -124,7 +127,7 @@ vim.keymap.set("n", "<Leader>ib", function()
 end)
 
 --ZenMode
-vim.keymap.set({ "n", "v" }, "<Leader>z", ":ZenMode<CR>")
+vim.keymap.set({ "n", "v" }, "<Leader>z", ":ZenMode<CR>", { silent = true })
 
 --ChatGPT
 vim.keymap.set({ "n", "v" }, "<Leader>ai", ":ChatGPT<CR>", { silent = true })
@@ -173,3 +176,12 @@ end)
 vim.keymap.set("n", "<leader>db", function()
 	require("dapui").toggle()
 end)
+
+-- Git (Fugitive + Git Signs)
+vim.keymap.set("n", "<leader>gs", ":Git<CR>", { silent = true })
+vim.keymap.set("n", "<leader>gd", ":Gdiffsplit<CR>", { silent = true })
+vim.keymap.set("n", "<leader>gl", ":Git log<CR>", { silent = true })
+vim.keymap.set("n", "<leader>gM", ":Git mergetool<CR>", { silent = true })
+vim.keymap.set("n", "<leader>gr", ":Gread<CR>", { silent = true })
+vim.keymap.set("n", "<leader>gw", ":Gwrite<CR>", { silent = true })
+vim.keymap.set("n", "<leader>gx", ":GDelete<CR>", { silent = true })
