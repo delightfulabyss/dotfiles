@@ -22,7 +22,7 @@ vim.keymap.set("n", "<leader>c", ":bd<CR>", { silent = true }) -- Close buffer
 vim.keymap.set("n", "<leader>p", ":bp<CR>", { silent = true }) -- Previous buffer
 vim.keymap.set("n", "<leader>n", ":bn<CR>", { silent = true }) -- Next buffer
 vim.keymap.set("n", "<leader>.", function()
-	vim.api.nvim_command("vsplit")
+	vim.api.nvim_command("botright vs")
 	vim.api.nvim_command("enew")
 	vim.api.nvim_command("file Scratch")
 	vim.api.nvim_command("setlocal buftype=nofile")
@@ -86,7 +86,8 @@ vim.keymap.set("n", "<leader>sw", require("telescope.builtin").grep_string, { de
 vim.keymap.set("n", "<leader>sg", require("telescope.builtin").live_grep, { desc = "[S]earch by [G]rep" })
 vim.keymap.set("n", "<leader>sd", require("telescope.builtin").diagnostics, { desc = "[S]earch [D]iagnostics" })
 vim.keymap.set("n", "<leader>sm", require("telescope.builtin").marks, { desc = "[S]earch [M]arks" })
-vim.keymap.set("n", "<leader>sf", require("telescope.builtin").git_files, { desc = "[S]earch Git [F]iles" })
+vim.keymap.set("n", "<leader>sf", require("telescope.builtin").find_files, { desc = "[S]earch CWD [f]iles" })
+vim.keymap.set("n", "<leader>sF", require("telescope.builtin").git_files, { desc = "[S]earch Git [F]iles" })
 vim.keymap.set("n", "<leader>sc", require("telescope.builtin").git_commits, { desc = "[S]earch Git [C]ommits" })
 vim.keymap.set("n", "<leader>sb", require("telescope.builtin").git_branches, { desc = "[S]earch Git [B]ranches" })
 vim.keymap.set("n", "<leader>ss", require("telescope.builtin").git_stash, { desc = "[S]earch Git [S]tashes" })
