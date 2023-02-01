@@ -22,7 +22,8 @@ vim.keymap.set("n", "<leader>c", ":bd<CR>", { silent = true }) -- Close buffer
 vim.keymap.set("n", "<leader>p", ":bp<CR>", { silent = true }) -- Previous buffer
 vim.keymap.set("n", "<leader>n", ":bn<CR>", { silent = true }) -- Next buffer
 vim.keymap.set("n", "<leader>.", function()
-	vim.api.nvim_command("vsplit")
+	vim.api.nvim_command("split")
+	vim.api.nvim_command("enew")
 	vim.api.nvim_command("file Scratch")
 	vim.api.nvim_command("setlocal buftype=nofile")
 	vim.api.nvim_command("setlocal bufhidden=wipe")
