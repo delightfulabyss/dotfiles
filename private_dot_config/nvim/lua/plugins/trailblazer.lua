@@ -26,7 +26,7 @@ return {
 			multiple_mark_symbol_counters_enabled = true,
 			number_line_color_enabled = true,
 			trail_mark_in_text_highlights_enabled = true,
-			trail_mark_symbol_line_indicators_enabled = false, -- show indicators for all trail marks in symbol column
+			trail_mark_symbol_line_indicators_enabled = true, -- show indicators for all trail marks in symbol column
 			symbol_line_enabled = true,
 			default_trail_mark_stacks = {
 				"default", -- , "stack_2", ...
