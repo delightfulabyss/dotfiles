@@ -1,3 +1,6 @@
+local actions = require("telescope.actions")
+local trouble = require("trouble.providers.trouble")
+
 return {
 	"nvim-telescope/telescope.nvim",
 	branch = "0.1.x",
@@ -8,8 +11,10 @@ return {
 			defaults = {
 				mappings = {
 					i = {
-						["<C-u>"] = false,
-						["<C-d>"] = false,
+						["<C-t>"] = trouble.open_with_trouble,
+					},
+					n = {
+						["<C-t>"] = trouble.open_with_trouble,
 					},
 				},
 			},
