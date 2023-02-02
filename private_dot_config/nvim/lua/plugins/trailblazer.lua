@@ -48,12 +48,12 @@ return {
 				},
 				TrailBlazerTrailMarkNext = {
 					guifg = colors.green,
-					guibg = "none",
+					guibg = colors.bg_dark,
 					gui = "bold",
 				},
 				TrailBlazerTrailMarkPrevious = {
 					guifg = colors.cyan,
-					guibg = "none",
+					guibg = colors.bg_dark,
 					gui = "bold",
 				},
 				TrailBlazerTrailMarkCursor = {
