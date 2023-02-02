@@ -1,5 +1,5 @@
 local actions = require("telescope.actions")
-local trouble = require("trouble.providers.trouble")
+local trouble = require("trouble.providers.telescope")
 
 return {
 	"nvim-telescope/telescope.nvim",
