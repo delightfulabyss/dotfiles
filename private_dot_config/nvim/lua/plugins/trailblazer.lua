@@ -1,5 +1,4 @@
-cal
-theme = require("tokyonight.colors")
+local theme = require("tokyonight.colors")
 
 return {
 	"LeonHeidelbach/trailblazer.nvim",
