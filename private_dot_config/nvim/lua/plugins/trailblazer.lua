@@ -39,67 +39,67 @@ return {
 					"chron_dsc", -- chronological descending
 				},
 				current_trail_mark_stack_sort_mode = "alpha_asc",
-				hl_groups = {
-					TrailBlazerTrailMark = {
-						guifg = colors.magenta,
-						guibg = "none",
-						gui = "bold",
-					},
-					TrailBlazerTrailMarkNext = {
-						guifg = colors.green,
-						guibg = "none",
-						gui = "bold",
-					},
-					TrailBlazerTrailMarkPrevious = {
-						guifg = colors.cyan,
-						guibg = "none",
-						gui = "bold",
-					},
-					TrailBlazerTrailMarkCursor = {
-						guifg = colors.blue,
-						guibg = "none",
-						gui = "bold",
-					},
-					TrailBlazerTrailMarkNewest = {
-						guifg = colors.orange,
-						guibg = "none",
-						gui = "bold",
-					},
-					TrailBlazerTrailMarkGlobalChron = {
-						guifg = "Black",
-						guibg = "Red",
-						gui = "bold",
-					},
-					TrailBlazerTrailMarkGlobalBufLineSorted = {
-						guifg = "Black",
-						guibg = "LightRed",
-						gui = "bold",
-					},
-					TrailBlazerTrailMarkGlobalChronBufLineSorted = {
-						guifg = "Black",
-						guibg = "Olive",
-						gui = "bold",
-					},
-					TrailBlazerTrailMarkGlobalChronBufSwitchGroupChron = {
-						guifg = "Black",
-						guibg = "VioletRed",
-						gui = "bold",
-					},
-					TrailBlazerTrailMarkGlobalChronBufSwitchGroupLineSorted = {
-						guifg = "Black",
-						guibg = "MediumSpringGreen",
-						gui = "bold",
-					},
-					TrailBlazerTrailMarkBufferLocalChron = {
-						guifg = "Black",
-						guibg = "Green",
-						gui = "bold",
-					},
-					TrailBlazerTrailMarkBufferLocalLineSorted = {
-						guifg = "Black",
-						guibg = "LightGreen",
-						gui = "bold",
-					},
+			},
+			hl_groups = {
+				TrailBlazerTrailMark = {
+					guifg = colors.magenta,
+					guibg = "none",
+					gui = "bold",
+				},
+				TrailBlazerTrailMarkNext = {
+					guifg = colors.green,
+					guibg = "none",
+					gui = "bold",
+				},
+				TrailBlazerTrailMarkPrevious = {
+					guifg = colors.cyan,
+					guibg = "none",
+					gui = "bold",
+				},
+				TrailBlazerTrailMarkCursor = {
+					guifg = colors.blue,
+					guibg = "none",
+					gui = "bold",
+				},
+				TrailBlazerTrailMarkNewest = {
+					guifg = colors.orange,
+					guibg = "none",
+					gui = "bold",
+				},
+				TrailBlazerTrailMarkGlobalChron = {
+					guifg = "Black",
+					guibg = "Red",
+					gui = "bold",
+				},
+				TrailBlazerTrailMarkGlobalBufLineSorted = {
+					guifg = "Black",
+					guibg = "LightRed",
+					gui = "bold",
+				},
+				TrailBlazerTrailMarkGlobalChronBufLineSorted = {
+					guifg = "Black",
+					guibg = "Olive",
+					gui = "bold",
+				},
+				TrailBlazerTrailMarkGlobalChronBufSwitchGroupChron = {
+					guifg = "Black",
+					guibg = "VioletRed",
+					gui = "bold",
+				},
+				TrailBlazerTrailMarkGlobalChronBufSwitchGroupLineSorted = {
+					guifg = "Black",
+					guibg = "MediumSpringGreen",
+					gui = "bold",
+				},
+				TrailBlazerTrailMarkBufferLocalChron = {
+					guifg = "Black",
+					guibg = "Green",
+					gui = "bold",
+				},
+				TrailBlazerTrailMarkBufferLocalLineSorted = {
+					guifg = "Black",
+					guibg = "LightGreen",
+					gui = "bold",
 				},
 			},
 		})
