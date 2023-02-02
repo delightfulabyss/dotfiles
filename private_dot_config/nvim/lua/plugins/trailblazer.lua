@@ -25,7 +25,7 @@ return {
 				next_mark_symbol = " ", -- disable this mark symbol by setting its value to ""
 				previous_mark_symbol = " ", -- disable this mark symbol by setting its value to ""
 				multiple_mark_symbol_counters_enabled = true,
-				number_line_color_enabled = true,
+				number_line_color_enabled = false,
 				trail_mark_in_text_highlights_enabled = true,
 				trail_mark_symbol_line_indicators_enabled = true, -- show indicators for all trail marks in symbol column
 				symbol_line_enabled = true,
@@ -48,12 +48,12 @@ return {
 				},
 				TrailBlazerTrailMarkNext = {
 					guifg = colors.green,
-					guibg = colors.bg_dark,
+					guibg = "none",
 					gui = "bold",
 				},
 				TrailBlazerTrailMarkPrevious = {
 					guifg = colors.cyan,
-					guibg = colors.bg_dark,
+					guibg = "none",
 					gui = "bold",
 				},
 				TrailBlazerTrailMarkCursor = {
