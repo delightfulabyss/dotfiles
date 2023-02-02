@@ -1,4 +1,3 @@
--- Keymaps for better default experience
 -- See `:help vim.keymap.set()`
 vim.keymap.set({ "n", "v" }, "<Space>", "<Nop>", { silent = true })
 
@@ -188,3 +187,11 @@ vim.keymap.set("n", "<leader>gw", ":Gwrite<CR>", { silent = true })
 vim.keymap.set("n", "<leader>gx", ":GDelete<CR>", { silent = true })
 
 --Trouble
+vim.keymap.set("n", "<leader>xx", ":TroubleToggle<CR>", { silent = true })
+vim.keymap.set("n", "<leader>xw", ":TroubleToggle workspace_diagnostics<CR>", { silent = true })
+vim.keymap.set("n", "<leader>xd", ":TroubleToggle document_diagnostics<CR>", { silent = true })
+vim.keymap.set("n", "<leader>xl", ":TroubleToggle loclist<CR>", { silent = true })
+vim.keymap.set("n", "<leader>xq", ":TroubleToggle quickfix<CR>", { silent = true })
+vim.keymap.set("n", "<leader>xr", ":TroubleToggle lsp_references<CR>", { silent = true })
+vim.keymap.set("n", "<leader>xD", ":TroubleToggle lsp_definitions<CR>", { silent = true })
+vim.keymap.set("n", "<leader>xt", ":TroubleToggle lsp_type_defitions<CR>", { silent = true })
