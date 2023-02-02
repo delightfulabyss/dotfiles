@@ -57,7 +57,7 @@ return {
 					gui = "bold",
 				},
 				TrailBlazerTrailMarkCursor = {
-					guifg = colors.blue,
+					guifg = colors.teal,
 					guibg = "none",
 					gui = "bold",
 				},
