@@ -20,8 +20,8 @@ return {
 				current_trail_mark_list_type = "quickfix", -- currently only quickfix lists are supported
 				verbose_trail_mark_select = true, -- print current mode notification on mode change
 				mark_symbol = " .", --  will only be used if trail_mark_symbol_line_indicators_enabled = true
-				newest_mark_symbol = " ", -- disable this mark symbol by setting its value to ""
-				cursor_mark_symbol = " ", -- disable this mark symbol by setting its value to ""
+				newest_mark_symbol = " N", -- disable this mark symbol by setting its value to ""
+				cursor_mark_symbol = " C",
 				next_mark_symbol = " ", -- disable this mark symbol by setting its value to ""
 				previous_mark_symbol = " ", -- disable this mark symbol by setting its value to ""
 				multiple_mark_symbol_counters_enabled = true,
