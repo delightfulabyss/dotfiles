@@ -1,4 +1,4 @@
-local trouble = require("trouble.providers.telescope")
+local trouble = require("trouble")
 
 return {
 	"nvim-telescope/telescope.nvim",
