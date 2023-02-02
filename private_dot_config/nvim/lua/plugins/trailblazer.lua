@@ -1,4 +1,4 @@
-local theme = require("tokyonight.colors")
+local colors = require("tokyonight.colors").setup()
 
 return {
 	"LeonHeidelbach/trailblazer.nvim",
@@ -41,28 +41,28 @@ return {
 				current_trail_mark_stack_sort_mode = "alpha_asc",
 				hl_groups = {
 					TrailBlazerTrailMark = {
-						guifg = "White",
+						guifg = colors.magenta,
 						guibg = "none",
 						gui = "bold",
 					},
 					TrailBlazerTrailMarkNext = {
-						guifg = "Green",
+						guifg = colors.green,
 						guibg = "none",
 						gui = "bold",
 					},
 					TrailBlazerTrailMarkPrevious = {
-						guifg = "Red",
+						guifg = colors.cyan,
 						guibg = "none",
 						gui = "bold",
 					},
 					TrailBlazerTrailMarkCursor = {
-						guifg = "Black",
-						guibg = "Orange",
+						guifg = colors.blue,
+						guibg = "none",
 						gui = "bold",
 					},
 					TrailBlazerTrailMarkNewest = {
-						guifg = "Black",
-						guibg = "LightBlue",
+						guifg = colors.orange,
+						guibg = "none",
 						gui = "bold",
 					},
 					TrailBlazerTrailMarkGlobalChron = {
