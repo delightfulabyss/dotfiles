@@ -107,7 +107,6 @@ vim.keymap.set("n", "dn", vim.diagnostic.goto_next)
 vim.keymap.set("n", "do", function()
 	vim.diagnostic.open_float({ scope = "line" })
 end)
-vim.keymap.set("n", "dq", vim.diagnostic.setloclist)
 
 --Silicon
 
@@ -187,3 +186,5 @@ vim.keymap.set("n", "<leader>gM", ":Git mergetool<CR>", { silent = true })
 vim.keymap.set("n", "<leader>gr", ":Gread<CR>", { silent = true })
 vim.keymap.set("n", "<leader>gw", ":Gwrite<CR>", { silent = true })
 vim.keymap.set("n", "<leader>gx", ":GDelete<CR>", { silent = true })
+
+--Trouble
