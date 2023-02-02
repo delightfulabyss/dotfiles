@@ -1,11 +1,10 @@
-local trouble = require("trouble.providers.telescope")
-
 return {
 	"nvim-telescope/telescope.nvim",
 	branch = "0.1.x",
 	dependencies = { "nvim-lua/plenary.nvim" },
 	cmd = "Telescope",
 	config = function()
+		local trouble = require("trouble.providers.telescope")
 		require("telescope").setup({
 			defaults = {
 				mappings = {
