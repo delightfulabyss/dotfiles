@@ -42,7 +42,7 @@ return {
 			},
 			hl_groups = {
 				TrailBlazerTrailMark = {
-					guifg = colors.magenta,
+					guifg = colors.orange,
 					guibg = "none",
 					gui = "bold",
 				},
@@ -62,7 +62,7 @@ return {
 					gui = "bold",
 				},
 				TrailBlazerTrailMarkNewest = {
-					guifg = colors.orange,
+					guifg = colors.magenta,
 					guibg = "none",
 					gui = "bold",
 				},
