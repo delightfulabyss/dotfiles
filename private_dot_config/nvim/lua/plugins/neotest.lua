@@ -5,6 +5,7 @@ return {
 		"nvim-treesitter",
 		"antoinemadec/FixCursorHold.nvim",
 		"haydenmeade/neotest-jest",
+		"nvim-neotest/neotest-plenary",
 	},
 	config = function()
 		require("neotest").setup({
