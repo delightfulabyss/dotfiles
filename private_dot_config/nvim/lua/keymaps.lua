@@ -198,6 +198,9 @@ vim.keymap.set("n", "<leader>xt", ":TroubleToggle lsp_type_definitions<CR>", { s
 
 --Neotest
 vim.keymap.set("n", "<leader>tr", require("neotest").run.run, { silent = true })
+vim.keymap.set("n", "<leader>tw", function()
+	require("neotest").run.run({ jestCommand = "jest --watch" })
+end, { silent = true })
 vim.keymap.set("n", "<leader>td", function()
 	require("neotest").run.run({ strategy = "dap" })
 end, { silent = true })
