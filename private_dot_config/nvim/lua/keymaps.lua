@@ -195,3 +195,14 @@ vim.keymap.set("n", "<leader>xq", ":TroubleToggle quickfix<CR>", { silent = true
 vim.keymap.set("n", "<leader>xr", ":TroubleToggle lsp_references<CR>", { silent = true })
 vim.keymap.set("n", "<leader>xD", ":TroubleToggle lsp_definitions<CR>", { silent = true })
 vim.keymap.set("n", "<leader>xt", ":TroubleToggle lsp_type_definitions<CR>", { silent = true })
+
+--Neotest
+vim.keymap.set("n", "<leader>tr", require("neotest").run.run, { silent = true })
+vim.keymap.set("n", "<leader>td", function()
+	require("neotest").run.run({ strategy = "dap" })
+end, { silent = true })
+vim.keymap.set("n", "<leader>tf", function()
+	require("neotest").run.run(vim.fn.expand("%"))
+end, { silent = true })
+vim.keymap.set("n", "<leader>ts", require("neotest").run.stop, { silent = true })
+vim.keymap.set("n", "<leader>ta", require("neotest").run.attach, { silent = true })
