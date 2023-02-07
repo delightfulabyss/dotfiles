@@ -1,18 +1,12 @@
 return {
-	"Exafunction/codeium.vim",
+	"jcdickinson/codeium.nvim",
+	dependencies = {
+		"nvim-lua/plenary.nvim",
+		"MunifTanjim/nui.nvim",
+		"hrsh7th/nvim-cmp",
+	},
 	event = "BufEnter",
 	config = function()
-		vim.keymap.set("i", "<Tab>", function()
-			return vim.fn["codeium#Accept"]()
-		end, { expr = true })
-		vim.keymap.set("i", "<C-;>", function()
-			return vim.fn["codeium#CycleCompletions"](1)
-		end, { expr = true })
-		vim.keymap.set("i", "<C-,>", function()
-			return vim.fn["codeium#CycleCompletions"](-1)
-		end, { expr = true })
-		vim.keymap.set("i", "<C-x>", function()
-			return vim.fn["codeium#Clear"]()
-		end, { expr = true })
+		require("codeium").setup({})
 	end,
 }
