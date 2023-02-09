@@ -9,11 +9,11 @@ vim.keymap.set("n", "j", "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = tr
 -- See `:help vim.highlight.on_yank()`
 local highlight_group = vim.api.nvim_create_augroup("YankHighlight", { clear = true })
 vim.api.nvim_create_autocmd("TextYankPost", {
-				callback = function()
-					vim.highlight.on_yank()
-				end,
-				group = highlight_group,
-				pattern = "*",
+	callback = function()
+		vim.highlight.on_yank()
+	end,
+	group = highlight_group,
+	pattern = "*",
 })
 
 -- Buffers
@@ -72,8 +72,8 @@ vim.keymap.set("n", "<leader><space>", require("telescope.builtin").buffers, { d
 vim.keymap.set("n", "<leader>/", function()
 	-- You can pass additional configuration to telescope to change theme, layout, etc.
 	require("telescope.builtin").current_buffer_fuzzy_find(require("telescope.themes").get_dropdown({
-					winblend = 10,
-					previewer = true,
+		winblend = 10,
+		previewer = true,
 	}))
 end, { desc = "[/] Fuzzily search in current buffer]" })
 vim.keymap.set("n", "<leader>sf", function()
@@ -93,10 +93,10 @@ vim.keymap.set("n", "<leader>ss", require("telescope.builtin").git_stash, { desc
 vim.keymap.set("n", "<leader>st", require("telescope").extensions.http.list, { desc = "[S]earch h[T]tp Codes" })
 vim.keymap.set("n", "<leader>sl", ":Telescope software-licenses find<CR>", { desc = "[S]earch Software [L]icenses" })
 vim.keymap.set(
-				"n",
-				"<leader>sM",
-				require("telescope").extensions.media_files.media_files,
-				{ desc = "[S]earch [M]edia Files" }
+	"n",
+	"<leader>sM",
+	require("telescope").extensions.media_files.media_files,
+	{ desc = "[S]earch [M]edia Files" }
 )
 vim.keymap.set("n", "<leader>sk", require("telescope.builtin").keymaps, { desc = "[S]earch [K]eymaps" })
 
