@@ -20,9 +20,10 @@ return {
 													PERF = { icon = " ", alt = { "OPTIM", "PERFORMANCE", "OPTIMIZE" } },
 													NOTE = { icon = " ", color = "hint", alt = { "INFO" } },
 													TEST = { icon = "⏲ ", color = "test", alt = { "TESTING", "PASSED", "FAILED" } },
-													AUDIT_RETURN = { icon = " ", color = "info" },
+													AUDIT_RETURN = { icon = " ", color = "warning" },
 													AUDIT_UNSURE = { icon = "? ", color = "warning" },
 													AUDIT_FOUND = { icon = " ", color = "error" },
+													AUDIT_OK = { icon = " ", color = "hint" },
 													gui_style = {
 																	fg = "NONE", -- The gui style to use for the fg highlight group.
 																	bg = "BOLD", -- The gui style to use for the bg highlight group.
