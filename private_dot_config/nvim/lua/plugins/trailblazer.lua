@@ -1,11 +1,12 @@
 local colors = require("tokyonight.colors").setup()
-
 return {
 	"LeonHeidelbach/trailblazer.nvim",
-	event = "BufEnter",
 	config = function()
 		require("trailblazer").setup({
 			lang = "en",
+			auto_save_trailblazer_state_on_exit = true,
+			auto_load_trailblazer_state_on_enter = false, -- experimental
+			custom_session_storage_dir = "", -- i.e. "~/trail_blazer_sessions/"
 			trail_options = {
 				available_trail_mark_modes = {
 					"global_chron",
@@ -19,18 +20,18 @@ return {
 				current_trail_mark_mode = "global_chron",
 				current_trail_mark_list_type = "quickfix", -- currently only quickfix lists are supported
 				verbose_trail_mark_select = true, -- print current mode notification on mode change
-				mark_symbol = " .", --  will only be used if trail_mark_symbol_line_indicators_enabled = true
-				newest_mark_symbol = " N", -- disable this mark symbol by setting its value to ""
-				cursor_mark_symbol = " C",
-				next_mark_symbol = " ", -- disable this mark symbol by setting its value to ""
-				previous_mark_symbol = " ", -- disable this mark symbol by setting its value to ""
+				mark_symbol = ".", --  will only be used if trail_mark_symbol_line_indicators_enabled = true
+				newest_mark_symbol = "", -- disable this mark symbol by setting its value to ""
+				cursor_mark_symbol = "", -- disable this mark symbol by setting its value to ""
+				next_mark_symbol = "", -- disable this mark symbol by setting its value to ""
+				previous_mark_symbol = "", -- disable this mark symbol by setting its value to ""
 				multiple_mark_symbol_counters_enabled = true,
-				number_line_color_enabled = false,
+				number_line_color_enabled = true,
 				trail_mark_in_text_highlights_enabled = true,
 				trail_mark_symbol_line_indicators_enabled = true, -- show indicators for all trail marks in symbol column
 				symbol_line_enabled = true,
 				default_trail_mark_stacks = {
-					"default", -- , "stack_2", ...
+					"default",
 				},
 				available_trail_mark_stack_sort_modes = {
 					"alpha_asc", -- alphabetical ascending
@@ -40,35 +41,37 @@ return {
 				},
 				current_trail_mark_stack_sort_mode = "alpha_asc",
 			},
+			force_mappings = {},
 			hl_groups = {
 				TrailBlazerTrailMark = {
-					guifg = colors.orange,
+					-- You can add any valid highlight group attribute to this table
+					guifg = "White",
 					guibg = "none",
 					gui = "bold",
 				},
 				TrailBlazerTrailMarkNext = {
-					guifg = colors.green,
+					guifg = colors.blue1,
 					guibg = "none",
 					gui = "bold",
 				},
 				TrailBlazerTrailMarkPrevious = {
-					guifg = colors.cyan,
+					guifg = colors.blue1,
 					guibg = "none",
 					gui = "bold",
 				},
 				TrailBlazerTrailMarkCursor = {
-					guifg = colors.teal,
+					guifg = colors.purple,
 					guibg = "none",
 					gui = "bold",
 				},
 				TrailBlazerTrailMarkNewest = {
-					guifg = colors.magenta,
+					guifg = colors.orange,
 					guibg = "none",
 					gui = "bold",
 				},
 				TrailBlazerTrailMarkGlobalChron = {
-					guifg = "Black",
-					guibg = "Red",
+					guifg = colors.magenta2,
+					guibg = "none",
 					gui = "bold",
 				},
 				TrailBlazerTrailMarkGlobalBufLineSorted = {
