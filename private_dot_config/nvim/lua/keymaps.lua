@@ -37,8 +37,8 @@ vim.keymap.set({ "n", "v" }, "<leader>k", "<C-w>k")
 vim.keymap.set({ "n", "v" }, "<leader>l", "<C-w>l")
 
 --Splits
-vim.keymap.set({ "n", "v" }, "<leader>wv", "<C-w>s")
-vim.keymap.set({ "n", "v" }, "<leader>wh", "<C-w>v")
+vim.keymap.set({ "n", "v" }, "<leader>wv", "<C-w>v")
+vim.keymap.set({ "n", "v" }, "<leader>wh", "<C-w>s")
 
 --Rotate
 vim.keymap.set({ "n", "v" }, "<leader>wr", "<C-w>r")
