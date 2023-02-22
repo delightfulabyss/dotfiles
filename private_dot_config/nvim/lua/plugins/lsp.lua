@@ -45,57 +45,57 @@ local on_attach = function(_, bufnr)
 
 	-- Enable format on save
 	vim.api.nvim_create_autocmd("BufWritePre", {
-					pattern = "*",
-					callback = function()
-						formatfunc()
-					end,
+		pattern = "*",
+		callback = function()
+			formatfunc()
+		end,
 	})
 end
 
 return {
-				-- LSP Configuration & Plugins
-				"neovim/nvim-lspconfig",
-				dependencies = {
-								-- Automatically install LSPs to stdpath for neovim
-								"williamboman/mason.nvim",
-								"williamboman/mason-lspconfig.nvim",
+	-- LSP Configuration & Plugins
+	"neovim/nvim-lspconfig",
+	dependencies = {
+		-- Automatically install LSPs to stdpath for neovim
+		"williamboman/mason.nvim",
+		"williamboman/mason-lspconfig.nvim",
 
-								-- Useful status updates for LSP
-								"j-hui/fidget.nvim",
-				},
-				config = function()
-					-- Setup mason so it can manage external tooling
-					require("mason").setup()
-					-- Enable the following language servers
-					-- Feel free to add/remove any LSPs that you want here. They will automatically be installed
-					local servers = { "cssls", "rust_analyzer", "solidity", "tsserver", "tailwindcss", "sumneko_lua", "emmet_ls" }
+		-- Useful status updates for LSP
+		"j-hui/fidget.nvim",
+	},
+	config = function()
+		-- Setup mason so it can manage external tooling
+		require("mason").setup()
+		-- Enable the following language servers
+		-- Feel free to add/remove any LSPs that you want here. They will automatically be installed
+		local servers = { "cssls", "rust_analyzer", "solidity", "tsserver", "tailwindcss", "lua_ls", "emmet_ls" }
 
-					-- Ensure the servers above are installed
-					require("mason-lspconfig").setup({
-									ensure_installed = servers,
-					})
+		-- Ensure the servers above are installed
+		require("mason-lspconfig").setup({
+			ensure_installed = servers,
+		})
 
-					-- nvim-cmp supports additional completion capabilities
-					local lspconfig = require("lspconfig")
-					local configs = require("lspconfig/configs")
-					local util = require("lspconfig/util")
+		-- nvim-cmp supports additional completion capabilities
+		local lspconfig = require("lspconfig")
+		local configs = require("lspconfig/configs")
+		local util = require("lspconfig/util")
 
-					local capabilities = vim.lsp.protocol.make_client_capabilities()
-					require("lspconfig").capabilities = require("cmp_nvim_lsp").default_capabilities(capabilities)
-					capabilities.textDocument.completion.completionItem.snippetSupport = true
-					for _, lsp in ipairs(servers) do
-						lspconfig[lsp].setup({
-										on_attach = on_attach,
-										capabilities = capabilities,
-						})
-					end
+		local capabilities = vim.lsp.protocol.make_client_capabilities()
+		require("lspconfig").capabilities = require("cmp_nvim_lsp").default_capabilities(capabilities)
+		capabilities.textDocument.completion.completionItem.snippetSupport = true
+		for _, lsp in ipairs(servers) do
+			lspconfig[lsp].setup({
+				on_attach = on_attach,
+				capabilities = capabilities,
+			})
+		end
 
-					-- Turn on lsp status information
-					require("fidget").setup()
+		-- Turn on lsp status information
+		require("fidget").setup()
 
-					-- Make runtime files discoverable to the server
-					local runtime_path = vim.split(package.path, ";")
-					table.insert(runtime_path, "lua/?.lua")
-					table.insert(runtime_path, "lua/?/init.lua")
-				end,
+		-- Make runtime files discoverable to the server
+		local runtime_path = vim.split(package.path, ";")
+		table.insert(runtime_path, "lua/?.lua")
+		table.insert(runtime_path, "lua/?/init.lua")
+	end,
 }
