@@ -178,6 +178,7 @@ end)
 
 -- Git (Fugitive + Git Signs)
 vim.keymap.set("n", "<leader>gs", ":Git<CR>", { silent = true })
+vim.keymap.set("n", "<leader>gp", ":Git push<CR>", { silent = true })
 vim.keymap.set("n", "<leader>gd", ":Gdiffsplit<CR>", { silent = true })
 vim.keymap.set("n", "<leader>gl", ":Git log<CR>", { silent = true })
 vim.keymap.set("n", "<leader>gM", ":Git mergetool<CR>", { silent = true })

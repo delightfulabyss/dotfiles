@@ -8,7 +8,7 @@ return {
 	config = function()
 		-- debugging
 		require("mason-nvim-dap").setup({
-			ensure_installed = { "codelldb", "bash", "js-debug-adapter" },
+			ensure_installed = { "codelldb", "js-debug-adapter" },
 			automatic_installation = true,
 			automatic_setup = true,
 		})
