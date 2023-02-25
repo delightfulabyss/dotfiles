@@ -75,9 +75,6 @@ bindsym $mod+a exec "rofi -modi window,run -show window"
 # .desktop file. It is a wrapper around dmenu, so you need that installed.
 # bindcode $mod+40 exec --no-startup-id i3-dmenu-desktop
 
-# Open Vim Cheatsheet
-bindsym $mod+Shift+v exec display ~/Documents/sync/cheatsheets/Vim.jpg
-
 # change focus
 bindsym $mod+h focus left
 bindsym $mod+j focus down
